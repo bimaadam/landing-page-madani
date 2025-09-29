@@ -19,10 +19,6 @@
           v-for="(service, index) in services"
           :key="service.id"
           class="service-card card"
-          v-motion
-          :initial="{ opacity: 0, y: 50 }"
-          :enter="{ opacity: 1, y: 0 }"
-          :delay="300 + (index * 100)"
           @click="selectedService = service"
         >
           <div class="service-icon" :style="{ backgroundColor: service.color }">

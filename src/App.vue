@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import { MotionPlugin } from '@vueuse/motion'
-import { createApp } from 'vue'
+import { createApp, onMounted } from 'vue'
 
 import Navbar from '@/components/Navbar.vue'
 import Hero from '@/components/Hero.vue'
@@ -26,9 +26,65 @@ import Stats from '@/components/Stats.vue'
 import Contact from '@/components/Contact.vue'
 import Footer from '@/components/Footer.vue'
 
+
 // Register motion plugin for smooth animations
 const app = createApp({})
 app.use(MotionPlugin)
+
+// Simple utility to create/update meta tags
+function upsertMeta(options: { name?: string; property?: string; content: string }) {
+  const selector = options.name ? `meta[name="${options.name}"]` : `meta[property="${options.property}"]`
+  let el = document.head.querySelector(selector) as HTMLMetaElement | null
+  if (!el) {
+    el = document.createElement('meta')
+    if (options.name) el.setAttribute('name', options.name)
+    if (options.property) el.setAttribute('property', options.property)
+    document.head.appendChild(el)
+  }
+  el.setAttribute('content', options.content)
+}
+
+// Create or update a canonical link
+function upsertCanonical(href: string) {
+  let link = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null
+  if (!link) {
+    link = document.createElement('link')
+    link.setAttribute('rel', 'canonical')
+    document.head.appendChild(link)
+  }
+  link.setAttribute('href', href)
+}
+
+onMounted(() => {
+  // Basic SEO / Open Graph / Twitter meta
+  const title = 'Koperasi Athaya Raya Madani Bandung'
+  const description = 'Koperasi Athaya Raya Madani adalah solusi keuangan terpercaya di Bandung, menyediakan layanan simpan pinjam dengan bunga kompetitif dan pelayanan profesional.'
+  const url = window.location.href
+  const image = `${window.location.origin}/social-preview.png` // adjust path if needed
+  const keywords = 'koperasi, simpan pinjam, pembiayaan, keuangan, madani, bandung, koperasi syariah'
+
+  // Document title
+  document.title = title
+
+  // Standard meta
+  upsertMeta({ name: 'description', content: description })
+  upsertMeta({ name: 'keywords', content: keywords })
+  upsertMeta({ name: 'author', content: 'Madani' })
+  upsertCanonical(url)
+
+  // Open Graph
+  upsertMeta({ property: 'og:title', content: title })
+  upsertMeta({ property: 'og:description', content: description })
+  upsertMeta({ property: 'og:type', content: 'website' })
+  upsertMeta({ property: 'og:url', content: url })
+  upsertMeta({ property: 'og:image', content: image })
+
+  // Twitter Card
+  upsertMeta({ name: 'twitter:card', content: 'summary_large_image' })
+  upsertMeta({ name: 'twitter:title', content: title })
+  upsertMeta({ name: 'twitter:description', content: description })
+  upsertMeta({ name: 'twitter:image', content: image })
+})
 </script>
 
 <style>

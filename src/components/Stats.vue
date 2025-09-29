@@ -18,9 +18,7 @@
             v-for="(stat, index) in stats"
             :key="stat.id"
             class="stat-item"
-            v-motion
-            :initial="{ opacity: 0, scale: 0.8 }"
-            :enter="{ opacity: 1, scale: 1 }"
+
             :delay="400 + (index * 100)"
           >
             <div class="stat-icon" :style="{ background: stat.gradient }">

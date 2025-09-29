@@ -57,11 +57,13 @@ onUnmounted(() => {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(10, 29, 55, 0.95);
+  background: rgba(10, 29, 55, 0.11); /* fallback */
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
   transition: all 0.3s ease;
 }
+
 
 .navbar-scrolled {
   background: var(--primary-color);

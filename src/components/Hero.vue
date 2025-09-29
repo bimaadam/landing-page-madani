@@ -63,8 +63,8 @@
             <div class="feature-icon">
               <IconBank />
             </div>
-            <h3>Pinjaman Mudah</h3>
-            <p>Proses pinjaman cepat dengan syarat yang fleksibel</p>
+            <h3 >Pinjaman Mudah</h3>
+            <p >Proses pinjaman cepat dengan syarat yang fleksibel</p>
           </div>
           
           <div 
@@ -159,10 +159,10 @@ import IconLayanan from './icons/IconLayanan.vue';
 }
 
 .hero-features {
-  background: var(--white);
-  margin-top: 80px;
+  background: var(--dark-blue);
+  margin-top:110px;
   padding: 40px 0;
-  border-radius: 20px 20px 0 0;
+  border-radius: 30px 30px 0 0;
 }
 
 .features-grid {
@@ -182,14 +182,15 @@ import IconLayanan from './icons/IconLayanan.vue';
 }
 
 .feature-item h3 {
-  color: var(--primary-color);
+  color: gold;
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .feature-item p {
-  color: var(--gray-medium);
+  color: white;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
