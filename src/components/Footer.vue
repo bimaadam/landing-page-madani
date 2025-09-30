@@ -4,16 +4,16 @@
       <div class="footer-content">
         <div class="footer-section company">
           <div class="footer-brand">
-            <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop" alt="Logo" class="footer-logo">
+            <img src="/logo.png" alt="Logo" class="footer-logo">
             <h3>Koperasi Athaya Raya Madani</h3>
           </div>
           <p class="company-description">
             Koperasi terpercaya yang melayani simpan pinjam dan pembiayaan syariah 
-            untuk kesejahteraan anggota dan masyarakat Bandung sejak 2015.
+            untuk kesejahteraan anggota dan masyarakat Bandung sejak 2022.
           </p>
           <div class="company-certifications">
             <span class="cert-badge">Terdaftar OJK</span>
-            <span class="cert-badge">ISO 9001:2015</span>
+            <span class="cert-badge">ISO 9001:2022</span>
           </div>
         </div>
 
@@ -44,7 +44,7 @@
           <div class="contact-info">
             <div class="contact-item">
               <span class="contact-icon">📍</span>
-              <span>Jl. Asia Afrika No. 123, Bandung, Jawa Barat 40111</span>
+              <span>Jl. Venus Bar., Manjahlega, Kec. Rancasari, Kota Bandung, Jawa Barat 40286</span>
             </div>
             <div class="contact-item">
               <span class="contact-icon">📞</span>
@@ -62,6 +62,11 @@
               <span>Sen-Jum: 08:00-17:00 WIB<br>Sabtu: 08:00-15:00 WIB</span>
             </div>
           </div>
+        </div>
+
+        <div class="footer-section maps">
+          <h4>Lokasi Kami</h4>
+          <MapsEmbed />
         </div>
 
         <div class="footer-section newsletter">
@@ -94,11 +99,12 @@
           </div>
         </div>
       </div>
+      </div>
 
       <div class="footer-bottom">
         <div class="footer-bottom-content">
           <div class="copyright">
-            <p>&copy; 2024 Koperasi Athaya Raya Madani Bandung. All rights reserved.</p>
+            <p>&copy; 2025 Koperasi Athaya Raya Madani Bandung. All rights reserved.</p>
           </div>
           
           <div class="footer-bottom-links">
@@ -109,16 +115,16 @@
           </div>
           
           <div class="footer-bottom-info">
-            <p>Badan Hukum: No. 518.2/123/BH/KWK.11/X/2015</p>
+            <p>Badan Hukum: No. 518.2/123/BH/KWK.11/X/2022</p>
           </div>
         </div>
       </div>
-    </div>
   </footer>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import MapsEmbed from './MapsEmbed.vue'
 
 const newsletterEmail = ref('')
 const isSubscribing = ref(false)
@@ -148,9 +154,14 @@ const subscribeNewsletter = async () => {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr 1.5fr;
-  gap: 3rem;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+  gap: 2rem;
   margin-bottom: 3rem;
+}
+
+/* Menyesuaikan urutan section di footer */
+.footer-section.maps {
+  grid-column: 1 / span 2; /* Peta menempati 2 kolom */
 }
 
 .footer-section h4, .footer-section h5 {
@@ -252,6 +263,17 @@ const subscribeNewsletter = async () => {
 
 .contact-item span:last-child {
   line-height: 1.4;
+}
+
+.address-link {
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.address-link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
 /* Newsletter Section */
@@ -369,12 +391,16 @@ const subscribeNewsletter = async () => {
 
 @media (max-width: 1024px) {
   .footer-content {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
   }
   
   .footer-section.company {
-    grid-column: span 3;
+    grid-column: span 4;
+  }
+  
+  .footer-section.maps {
+    grid-column: span 2;
   }
 }
 
@@ -385,6 +411,10 @@ const subscribeNewsletter = async () => {
   }
   
   .footer-section.company {
+    grid-column: span 1;
+  }
+  
+  .footer-section.maps {
     grid-column: span 1;
   }
   

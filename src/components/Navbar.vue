@@ -4,7 +4,10 @@
       <div class="navbar-content">
         <div class="navbar-brand">
           <img src="/logo.png" alt="Logo" class="logo">
-          <span class="brand-text">Koperasi Athaya Raya Madani</span>
+          <div class="brand-text-container">
+            <span class="brand-text">KOPERASI ATHAYA RAYA MADANI</span>
+            <span class="brand-subtext">KOPERASI SIMPAN PINJAM</span>
+          </div>
         </div>
         
         <div class="navbar-menu" :class="{ 'navbar-menu-open': isMenuOpen }">
@@ -66,7 +69,9 @@ onUnmounted(() => {
 
 
 .navbar-scrolled {
-  background: var(--primary-color);
+  background: rgba(10, 29, 55, 0.9); /* Gunakan warna dasar dengan opacity */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
 }
 
@@ -90,10 +95,23 @@ onUnmounted(() => {
   object-fit: cover;
 }
 
+.brand-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .brand-text {
   font-size: 1.2rem;
   font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 2px;
+}
+
+.brand-subtext {
+  font-size: 0.8rem;
+  font-weight: 400;
   color: var(--white);
+  opacity: 0.8;
 }
 
 .navbar-menu {
@@ -148,6 +166,10 @@ onUnmounted(() => {
 @media (max-width: 768px) {
   .brand-text {
     font-size: 1rem;
+  }
+  
+  .brand-subtext {
+    font-size: 0.7rem;
   }
   
   .navbar-toggle {

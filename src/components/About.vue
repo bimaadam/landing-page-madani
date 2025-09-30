@@ -10,7 +10,7 @@
       >
         <h2 class="section-title">Tentang Kami</h2>
         <p class="section-subtitle">
-          Mengenal lebih dekat Koperasi Athaya Raya Madani Bandung, sejarah, visi misi, dan legalitas kami
+          Mengenal lebih dekat Koperasi Athaya Raya Madani Bandung, sejarah.
         </p>
       </div>
 
@@ -36,18 +36,16 @@ Dengan semangat kolaborasi dan inovasi, kami yakin Koperasi Athaya Raya Madani a
           <div class="about-section">
             <h3>Visi</h3>
             <p>
-              Menjadi koperasi terdepan dalam memberikan layanan keuangan syariah yang 
-              profesional, amanah, dan berkesinambungan untuk kesejahteraan anggota dan masyarakat.
+              Terwujudnya Koperasi yang mandiri dan unggul, serta meningkatakan kesejahteraan Anggota dan masyarakat
             </p>
           </div>
 
           <div class="about-section">
             <h3>Misi</h3>
             <ul>
-              <li>Memberikan layanan simpan pinjam yang mudah, aman, dan terpercaya</li>
-              <li>Mengembangkan produk keuangan yang inovatif sesuai kebutuhan anggota</li>
-              <li>Meningkatkan literasi keuangan dan pemberdayaan ekonomi masyarakat</li>
-              <li>Menjalankan tata kelola koperasi yang transparan dan akuntabel</li>
+              <li>Mewujudkan Koperasi yang profesional, akuntabilitas dan transparan</li>
+              <li>Mengembangkan Koperasi dan kerjasama Kemitraan</li>
+              <li>Menumbuh kembangkan diverifikasi produk simpan pinjam dan pelayanan Koperasi untuk Anggota</li>
             </ul>
           </div>
         </div>
@@ -69,7 +67,7 @@ Dengan semangat kolaborasi dan inovasi, kami yakin Koperasi Athaya Raya Madani a
             </div>
           </div>
 
-          <div class="certifications">
+          <!-- <div class="certifications">
             <h4>Legalitas & Sertifikasi</h4>
             <div class="cert-grid">
               <div class="cert-item">
@@ -96,7 +94,7 @@ Dengan semangat kolaborasi dan inovasi, kami yakin Koperasi Athaya Raya Madani a
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

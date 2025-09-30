@@ -11,7 +11,7 @@
         >
           <h1 class="hero-title">
             Koperasi Athaya Raya Madani Bandung
-            <span class="hero-subtitle">Solusi Simpan Pinjam & Pembiayaan yang Amanah</span>
+            <span class="hero-subtitle">Kerja Keras, Kerja Cerdas, Kerja Ikhlas</span>
           </h1>
           <p class="hero-description">
             Bergabunglah dengan koperasi terpercaya yang telah melayani ribuan anggota di Bandung. 

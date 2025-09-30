@@ -7,6 +7,8 @@
       <Services />
       <Testimonials />
       <Stats />
+      <Divisions />
+      <Partners />
       <Contact />
     </main>
     <Footer />
@@ -25,6 +27,8 @@ import Testimonials from '@/components/Testimonials.vue'
 import Stats from '@/components/Stats.vue'
 import Contact from '@/components/Contact.vue'
 import Footer from '@/components/Footer.vue'
+import Divisions from './components/Divisions.vue'
+import Partners from './components/Partners.vue'
 
 
 // Register motion plugin for smooth animations

@@ -9,49 +9,37 @@
         :delay="200"
       >
         <div class="stats-header">
-          <h2>Kepercayaan dalam Angka</h2>
-          <p>Pencapaian yang membanggakan berkat dukungan seluruh anggota</p>
+          <h2>Pengurus Koperasi</h2>
+          <p>Para pengurus yang menjalankan roda organisasi koperasi dengan penuh dedikasi</p>
         </div>
 
-        <div class="stats-grid">
+        <!-- Grid untuk foto pengurus koperasi -->
+        <div class="pengurus-grid">
           <div 
-            v-for="(stat, index) in stats"
-            :key="stat.id"
-            class="stat-item"
-
+            v-for="(pengurus, index) in pengurusList"
+            :key="pengurus.id"
+            class="pengurus-item"
+            v-motion
+            :initial="{ opacity: 0, y: 30 }"
+            :enter="{ opacity: 1, y: 0 }"
             :delay="400 + (index * 100)"
           >
-            <div class="stat-icon" :style="{ background: stat.gradient }">
-              {{ stat.icon }}
-            </div>
-            <div class="stat-content">
-              <div class="stat-number" ref="statNumbers">
-                {{ displayedNumbers[index] }}{{ stat.suffix }}
+            <div class="pengurus-image-container">
+              <img 
+                :src="pengurus.image" 
+                :alt="pengurus.name"
+                class="pengurus-image"
+                @error="handleImageError"
+              />
+              <div class="pengurus-overlay">
+                <div class="pengurus-name">{{ pengurus.name }}</div>
+                <div class="pengurus-position">{{ pengurus.position }}</div>
               </div>
-              <div class="stat-label">{{ stat.label }}</div>
-              <div class="stat-description">{{ stat.description }}</div>
             </div>
-          </div>
-        </div>
-
-        <div class="stats-achievements">
-          <h3>Penghargaan & Sertifikasi</h3>
-          <div class="achievements-grid">
-            <div 
-              v-for="(achievement, index) in achievements"
-              :key="achievement.id"
-              class="achievement-item"
-              v-motion
-              :initial="{ opacity: 0, y: 30 }"
-              :enter="{ opacity: 1, y: 0 }"
-              :delay="800 + (index * 100)"
-            >
-              <div class="achievement-icon">{{ achievement.icon }}</div>
-              <div class="achievement-content">
-                <h4>{{ achievement.title }}</h4>
-                <p>{{ achievement.description }}</p>
-                <span class="achievement-year">{{ achievement.year }}</span>
-              </div>
+            <div class="pengurus-content">
+              <h3 class="pengurus-name-mobile">{{ pengurus.name }}</h3>
+              <p class="pengurus-position-mobile">{{ pengurus.position }}</p>
+              <p class="pengurus-bio">{{ pengurus.bio }}</p>
             </div>
           </div>
         </div>
@@ -61,125 +49,44 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, reactive } from 'vue'
+import { ref } from 'vue'
 
-interface Stat {
+interface Pengurus {
   id: number
-  icon: string
-  number: number
-  suffix: string
-  label: string
-  description: string
-  gradient: string
+  name: string
+  position: string
+  bio: string
+  image: string
 }
 
-interface Achievement {
-  id: number
-  icon: string
-  title: string
-  description: string
-  year: string
-}
-
-const displayedNumbers = reactive<number[]>([])
-
-const stats: Stat[] = [
+const pengurusList: Pengurus[] = [
   {
     id: 1,
-    icon: '👥',
-    number: 15420,
-    suffix: '+',
-    label: 'Anggota Aktif',
-    description: 'Tersebar di seluruh Jawa Barat',
-    gradient: 'linear-gradient(135deg, #FFD700, #FFA000)'
+    name: 'Khaidir Anwar Sani, S.IP',
+    position: 'Ketua Koperasi',
+    bio: 'Berpengalaman dalam manajemen koperasi selama lebih dari 10 tahun',
+    image: '/pengurus/ketuakop.png' 
   },
   {
     id: 2,
-    icon: '🏢',
-    number: 12,
-    suffix: '',
-    label: 'Kantor Cabang',
-    description: 'Melayani di berbagai kota',
-    gradient: 'linear-gradient(135deg, #4CAF50, #2E7D32)'
+    name: 'Astri Munggarani, S.I.Kom',
+    position: 'Sekretaris',
+    bio: 'Berpengalaman dalam administrasi dan pengelolaan organisasi',
+    image: '/pengurus/sekretaris.png' 
   },
   {
     id: 3,
-    icon: '💰',
-    number: 250,
-    suffix: 'M',
-    label: 'Total Pembiayaan',
-    description: 'Dalam miliar rupiah per tahun',
-    gradient: 'linear-gradient(135deg, #2196F3, #1565C0)'
-  },
-  {
-    id: 4,
-    icon: '⭐',
-    number: 98,
-    suffix: '%',
-    label: 'Tingkat Kepuasan',
-    description: 'Rating kepuasan anggota',
-    gradient: 'linear-gradient(135deg, #9C27B0, #6A1B9A)'
+    name: 'Muhammad Anggi Natapraja, S.Pi',
+    position: 'Bendahara',
+    bio: 'Ahli dalam pengelolaan keuangan koperasi syariah',
+    image: '/pengurus/bendahara.png'
   }
 ]
 
-const achievements: Achievement[] = [
-  {
-    id: 1,
-    icon: '🏆',
-    title: 'Koperasi Berprestasi Terbaik',
-    description: 'Penghargaan dari Dinas Koperasi Jawa Barat',
-    year: '2023'
-  },
-  {
-    id: 2,
-    icon: '🛡️',
-    title: 'Sertifikat ISO 9001:2015',
-    description: 'Standar manajemen mutu internasional',
-    year: '2022'
-  },
-  {
-    id: 3,
-    icon: '🌟',
-    title: 'Top Digital Innovation',
-    description: 'Inovasi layanan digital terbaik',
-    year: '2023'
-  },
-  {
-    id: 4,
-    icon: '🤝',
-    title: 'Koperasi Terpercaya',
-    description: 'Sertifikat kepercayaan dari OJK',
-    year: '2024'
-  }
-]
-
-// Animation untuk counter number
-const animateNumbers = () => {
-  stats.forEach((stat, index) => {
-    displayedNumbers[index] = 0
-    const increment = stat.number / 100
-    const timer = setInterval(() => {
-      if (displayedNumbers[index] < stat.number) {
-        displayedNumbers[index] = Math.min(displayedNumbers[index] + increment, stat.number)
-        if (displayedNumbers[index] === stat.number) {
-          clearInterval(timer)
-        }
-      }
-    }, 20)
-  })
+const handleImageError = (event: Event) => {
+  const target = event.target as HTMLImageElement;
+  target.src = '/default-avatar.png'; // Fallback image jika gambar tidak ditemukan
 }
-
-onMounted(() => {
-  // Initialize displayed numbers
-  stats.forEach((_, index) => {
-    displayedNumbers[index] = 0
-  })
-  
-  // Start animation after component mounts
-  setTimeout(() => {
-    animateNumbers()
-  }, 500)
-})
 </script>
 
 <style scoped>
@@ -187,6 +94,7 @@ onMounted(() => {
   background: var(--gray-light);
   position: relative;
   overflow: hidden;
+  padding: 4rem 0;
 }
 
 .stats::before {
@@ -221,132 +129,94 @@ onMounted(() => {
   font-size: 1.2rem;
 }
 
-.stats-grid {
+.pengurus-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-bottom: 4rem;
 }
 
-.stat-item {
+.pengurus-item {
   background: var(--white);
-  padding: 2.5rem;
   border-radius: 16px;
   box-shadow: var(--shadow);
-  text-align: center;
+  overflow: hidden;
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
 }
 
-.stat-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--accent-color);
-}
-
-.stat-item:hover {
+.pengurus-item:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-hover);
 }
 
-.stat-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  margin: 0 auto 1.5rem;
-  color: var(--white);
+.pengurus-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
 }
 
-.stat-number {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-  line-height: 1;
+.pengurus-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.stat-label {
-  font-size: 1.2rem;
+.pengurus-item:hover .pengurus-image {
+  transform: scale(1.05);
+}
+
+.pengurus-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 2rem 1.5rem 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.pengurus-item:hover .pengurus-overlay {
+  transform: translateY(0);
+}
+
+.pengurus-name {
+  font-size: 1.4rem;
   font-weight: 600;
-  color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
-.stat-description {
-  color: var(--gray-medium);
-  font-size: 0.9rem;
+.pengurus-position {
+  font-size: 1rem;
+  color: #ddd;
 }
 
-.stats-achievements {
-  background: var(--white);
-  padding: 3rem;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-}
-
-.stats-achievements h3 {
-  color: var(--primary-color);
-  font-size: 1.8rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.achievement-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+.pengurus-content {
   padding: 1.5rem;
-  border: 2px solid var(--gray-light);
-  border-radius: 12px;
-  transition: all 0.3s ease;
+  text-align: center;
 }
 
-.achievement-item:hover {
-  border-color: var(--accent-color);
-  background: var(--gray-light);
-}
-
-.achievement-icon {
-  font-size: 2rem;
-  flex-shrink: 0;
-}
-
-.achievement-content h4 {
-  color: var(--primary-color);
-  font-size: 1.1rem;
+.pengurus-name-mobile {
+  font-size: 1.4rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  margin: 0 0 0.5rem 0;
+  display: none;
 }
 
-.achievement-content p {
+.pengurus-position-mobile {
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.pengurus-bio {
   color: var(--gray-medium);
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
-.achievement-year {
-  background: var(--accent-color);
-  color: var(--primary-color);
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
@@ -354,25 +224,21 @@ onMounted(() => {
     font-size: 2rem;
   }
   
-  .stats-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .stat-item {
-    padding: 2rem;
-  }
-  
-  .stat-number {
-    font-size: 2.5rem;
-  }
-  
-  .stats-achievements {
-    padding: 2rem;
-  }
-  
-  .achievements-grid {
+  .pengurus-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .pengurus-overlay {
+    transform: translateY(0); /* Tampilkan info di mobile */
+  }
+  
+  .pengurus-name-mobile, 
+  .pengurus-position-mobile {
+    display: block;
+  }
+  
+  .pengurus-overlay {
+    display: none; /* Sembunyikan overlay di mobile karena info ditampilkan di bawah */
   }
 }
 </style>
