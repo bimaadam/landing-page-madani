@@ -29,7 +29,7 @@
               <div class="info-icon">📍</div>
               <div class="info-content">
                 <h4>Alamat Kantor Pusat</h4>
-                <p>Jl. Asia Afrika No. 123, Bandung<br>Jawa Barat 40111</p>
+                <p>3M68+232, Jl. Venus Bar., Manjahlega, Kec. Rancasari, Kota Bandung<br> Jawa Barat 40286</p>
               </div>
             </div>
 
