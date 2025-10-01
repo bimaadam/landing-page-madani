@@ -1,5 +1,5 @@
 <template>
-  <section class="section stats">
+  <section class="section pengurus" id="pengurus">
     <div class="container">
       <div 
         class="stats-content"

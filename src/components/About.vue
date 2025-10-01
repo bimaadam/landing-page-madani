@@ -33,7 +33,7 @@ Dengan semangat kolaborasi dan inovasi, kami yakin Koperasi Athaya Raya Madani a
             </p>
           </div>
 
-          <div class="about-section">
+          <div class="about-section visi-misi" id="about-section">
             <h3>Visi</h3>
             <p>
               Terwujudnya Koperasi yang mandiri dan unggul, serta meningkatakan kesejahteraan Anggota dan masyarakat
