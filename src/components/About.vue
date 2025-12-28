@@ -71,7 +71,7 @@ Dengan semangat kolaborasi dan inovasi, kami yakin Koperasi Athaya Raya Madani a
             <h4>Legalitas & Sertifikasi</h4>
             <div class="cert-grid">
               <div class="cert-item">
-                <div class="cert-icon">📋</div>
+                <i class="bi bi-file-earmark-text-fill cert-icon"></i>
                 <div class="cert-info">
                   <h5>Badan Hukum Koperasi</h5>
                   <p>No. 518.2/123/BH/KWK.11/X/2015</p>
@@ -79,7 +79,7 @@ Dengan semangat kolaborasi dan inovasi, kami yakin Koperasi Athaya Raya Madani a
               </div>
               
               <div class="cert-item">
-                <div class="cert-icon">🏛️</div>
+                <i class="bi bi-bank cert-icon"></i>
                 <div class="cert-info">
                   <h5>Izin Usaha Koperasi</h5>
                   <p>Dinas Koperasi Jawa Barat</p>
@@ -87,7 +87,7 @@ Dengan semangat kolaborasi dan inovasi, kami yakin Koperasi Athaya Raya Madani a
               </div>
               
               <div class="cert-item">
-                <div class="cert-icon">🛡️</div>
+                <i class="bi bi-shield-fill-check cert-icon"></i>
                 <div class="cert-info">
                   <h5>Sertifikat ISO 9001:2015</h5>
                   <p>Manajemen Mutu Terjamin</p>
@@ -200,6 +200,7 @@ Dengan semangat kolaborasi dan inovasi, kami yakin Koperasi Athaya Raya Madani a
 .cert-icon {
   font-size: 1.5rem;
   flex-shrink: 0;
+  color: var(--accent-color);
 }
 
 .cert-info h5 {

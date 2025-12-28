@@ -8,6 +8,7 @@
       <Testimonials />
       <Stats />
       <Divisions />
+      <OrganizationStructure />
       <Partners />
       <Contact />
     </main>
@@ -29,6 +30,7 @@ import Contact from '@/components/Contact.vue'
 import Footer from '@/components/Footer.vue'
 import Divisions from './components/Divisions.vue'
 import Partners from './components/Partners.vue'
+import OrganizationStructure from './components/OrganizationStructure.vue'
 
 
 // Register motion plugin for smooth animations

@@ -22,7 +22,7 @@
           @click="selectedService = service"
         >
           <div class="service-icon" :style="{ backgroundColor: service.color }">
-            {{ service.icon }}
+            <i :class="service.icon"></i>
           </div>
           <h3>{{ service.title }}</h3>
           <p>{{ service.description }}</p>
@@ -39,7 +39,7 @@
           <button class="modal-close" @click="selectedService = null">&times;</button>
           <div class="modal-header">
             <div class="service-icon large" :style="{ backgroundColor: selectedService.color }">
-              {{ selectedService.icon }}
+              <i :class="selectedService.icon"></i>
             </div>
             <h3>{{ selectedService.title }}</h3>
           </div>
@@ -86,7 +86,7 @@ const services: Service[] = [
     title: 'Simpanan Berjangka',
     description: 'Simpanan dengan jangka waktu tertentu dan bunga yang menarik',
     fullDescription: 'Simpanan Berjangka adalah produk investasi jangka panjang dengan tingkat pengembalian yang kompetitif dan risiko yang minimal. Cocok untuk perencanaan keuangan masa depan.',
-    icon: '💰',
+    icon: 'bi bi-piggy-bank-fill',
     color: '#FFD700',
     features: ['Bunga kompetitif', 'Jangka waktu fleksibel', 'Aman dan terjamin'],
     benefits: [
@@ -107,7 +107,7 @@ const services: Service[] = [
     title: 'Pinjaman Usaha',
     description: 'Pinjaman untuk mengembangkan usaha dengan bunga rendah',
     fullDescription: 'Pinjaman Usaha dirancang khusus untuk membantu anggota mengembangkan dan memulai usaha dengan suku bunga yang kompetitif dan proses yang mudah.',
-    icon: '🏢',
+    icon: 'bi bi-building-fill',
     color: '#4CAF50',
     features: ['Bunga rendah', 'Proses cepat', 'Tenor fleksibel'],
     benefits: [
@@ -128,7 +128,7 @@ const services: Service[] = [
     title: 'Pembiayaan Pensiun',
     description: 'Solusi keuangan untuk persiapan masa pensiun yang nyaman',
     fullDescription: 'Program pembiayaan khusus untuk mempersiapkan masa pensiun yang nyaman dengan sistem pembayaran yang disesuaikan dengan kemampuan anggota.',
-    icon: '👴',
+    icon: 'bi bi-person-fill',
     color: '#2196F3',
     features: ['Investasi jangka panjang', 'Manfaat pensiun', 'Fleksibel'],
     benefits: [
@@ -149,7 +149,7 @@ const services: Service[] = [
     title: 'Layanan Digital',
     description: 'Akses mudah melalui aplikasi mobile dan internet banking',
     fullDescription: 'Layanan Digital memberikan kemudahan akses 24/7 untuk melakukan berbagai transaksi keuangan melalui aplikasi mobile dan internet banking yang user-friendly.',
-    icon: '📱',
+    icon: 'bi bi-phone-fill',
     color: '#9C27B0',
     features: ['24/7 akses', 'Transfer online', 'Monitoring real-time'],
     benefits: [

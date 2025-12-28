@@ -26,7 +26,7 @@
             <h3>Informasi Kontak</h3>
             
             <div class="info-item">
-              <div class="info-icon">📍</div>
+              <i class="bi bi-geo-alt-fill info-icon"></i>
               <div class="info-content">
                 <h4>Alamat Kantor Pusat</h4>
                 <p>3M68+232, Jl. Venus Bar., Manjahlega, Kec. Rancasari, Kota Bandung<br> Jawa Barat 40286</p>
@@ -34,7 +34,7 @@
             </div>
 
             <div class="info-item">
-              <div class="info-icon">📞</div>
+              <i class="bi bi-telephone-fill info-icon"></i>
               <div class="info-content">
                 <h4>Telepon & WhatsApp</h4>
                 <p>
@@ -45,7 +45,7 @@
             </div>
 
             <div class="info-item">
-              <div class="info-icon">✉️</div>
+              <i class="bi bi-envelope-fill info-icon"></i>
               <div class="info-content">
                 <h4>Email</h4>
                 <p>
@@ -56,7 +56,7 @@
             </div>
 
             <div class="info-item">
-              <div class="info-icon">🕒</div>
+              <i class="bi bi-clock-fill info-icon"></i>
               <div class="info-content">
                 <h4>Jam Operasional</h4>
                 <p>
@@ -70,10 +70,18 @@
             <div class="social-media">
               <h4>Ikuti Kami</h4>
               <div class="social-links">
-                <a href="#" class="social-link facebook">📘</a>
-                <a href="#" class="social-link instagram">📸</a>
-                <a href="#" class="social-link youtube">📺</a>
-                <a href="#" class="social-link linkedin">💼</a>
+                <a href="#" class="social-link facebook">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="social-link instagram">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="social-link youtube">
+                  <i class="bi bi-youtube"></i>
+                </a>
+                <a href="#" class="social-link linkedin">
+                  <i class="bi bi-linkedin"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -204,7 +212,9 @@
       <!-- Success Message -->
       <div v-if="showSuccess" class="success-message" v-motion-fade>
         <div class="success-content">
-          <div class="success-icon">✅</div>
+          <div class="success-icon">
+            <i class="bi bi-check-circle-fill" style="color: #4CAF50; font-size: 4rem;"></i>
+          </div>
           <h3>Formulir Berhasil Dikirim!</h3>
           <p>Terima kasih atas minat Anda. Tim kami akan menghubungi Anda dalam 1x24 jam.</p>
           <button @click="closeSuccess" class="btn btn-primary">Tutup</button>
@@ -323,6 +333,7 @@ const closeSuccess = () => {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--accent-color);
 }
 
 .info-content h4 {
@@ -363,15 +374,17 @@ const closeSuccess = () => {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-decoration: none;
   transition: all 0.3s ease;
   background: var(--gray-light);
+  color: var(--primary-color);
 }
 
 .social-link:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow);
+  background: var(--accent-color);
 }
 
 .form-description {

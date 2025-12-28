@@ -1,3 +1,6 @@
+/* Import Bootstrap Icons */
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
 :root {
   --primary-color: #0A1D37;
   --accent-color: #FFD700;
@@ -76,7 +79,7 @@ body {
   font-size: 2.5rem;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   color: var(--primary-color);
 }
 
@@ -84,15 +87,31 @@ body {
   font-size: 1.1rem;
   text-align: center;
   color: var(--gray-medium);
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
   }
   
   .section {

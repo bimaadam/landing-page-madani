@@ -22,14 +22,14 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  address: 'KSP ATHAYA RAYA MADANI, 3M68+232, Jl. Venus Bar., Manjahlega, Kec. Rancasari, Kota Bandung, Jawa Barat 40286',
+  address: 'Jl. Cipamokolan No.8 RT.003 RW.001 Kel. Cipamokolan Kec. Rancasari Kota Bandung 40292',
   coordinates: () => ({
     lat: -6.9398368,
     lng: 107.6653749
   })
 })
 
-const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.140394885761!2d107.6631861749825!3d-6.939836898780185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e957c3058ff7%3A0x77bf730191df7f3d!2sKSP%20ATHAYA%20RAYA%20MADANI!5e0!3m2!1sid!2sid!4v1727438568000!5m2!1sid!2sid`
+const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5962447544816!2d107.67463097432542!3d-6.938762567922693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c374cccff485%3A0xb4e03563cc9cd888!2sBank%20BRI%20CRM%20-%20BRI%20UNIT%20RIUNG!5e0!3m2!1sen!2sid!4v1766913265538!5m2!1sen!2sid`
 </script>
 
 <style scoped>

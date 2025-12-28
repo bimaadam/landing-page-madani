@@ -11,10 +11,6 @@
             Koperasi terpercaya yang melayani simpan pinjam dan pembiayaan syariah 
             untuk kesejahteraan anggota dan masyarakat Bandung sejak 2022.
           </p>
-          <div class="company-certifications">
-            <span class="cert-badge">Terdaftar OJK</span>
-            <span class="cert-badge">ISO 9001:2022</span>
-          </div>
         </div>
 
         <div class="footer-section links">
@@ -43,22 +39,21 @@
           <h4>Kontak Kami</h4>
           <div class="contact-info">
             <div class="contact-item">
-              <span class="contact-icon">📍</span>
-              <span>Jl. Venus Bar., Manjahlega, Kec. Rancasari, Kota Bandung, Jawa Barat 40286</span>
+              <i class="bi bi-geo-alt-fill contact-icon"></i>
+              <span>Jl. Cipamokolan No.8 RT.003 RW.001 Kel. Cipamokolan Kec. Rancasari Kota Bandung 40292</span>
             </div>
             <div class="contact-item">
-              <span class="contact-icon">📞</span>
+              <i class="bi bi-telephone-fill contact-icon"></i>
               <span>
-                <a href="tel:+622212345678">(022) 1234-5678</a><br>
-                <a href="https://wa.me/6281234567890">+62 812-3456-7890</a>
+                <a href="tel:+622287516947">022-87516947</a>
               </span>
             </div>
             <div class="contact-item">
-              <span class="contact-icon">✉️</span>
+              <i class="bi bi-envelope-fill contact-icon"></i>
               <span><a href="mailto:info@athayarayamadani.com">info@athayarayamadani.com</a></span>
             </div>
             <div class="contact-item">
-              <span class="contact-icon">🕒</span>
+              <i class="bi bi-clock-fill contact-icon"></i>
               <span>Sen-Jum: 08:00-17:00 WIB<br>Sabtu: 08:00-15:00 WIB</span>
             </div>
           </div>
@@ -90,11 +85,21 @@
           <div class="social-media">
             <h5>Ikuti Kami</h5>
             <div class="social-links">
-              <a href="#" class="social-link facebook" title="Facebook">📘</a>
-              <a href="#" class="social-link instagram" title="Instagram">📸</a>
-              <a href="#" class="social-link youtube" title="YouTube">📺</a>
-              <a href="#" class="social-link linkedin" title="LinkedIn">💼</a>
-              <a href="#" class="social-link twitter" title="Twitter">🐦</a>
+              <a href="#" class="social-link facebook" title="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="social-link instagram" title="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="social-link youtube" title="YouTube">
+                <i class="bi bi-youtube"></i>
+              </a>
+              <a href="#" class="social-link linkedin" title="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="#" class="social-link twitter" title="Twitter">
+                <i class="bi bi-twitter-x"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -258,7 +263,7 @@ const subscribeNewsletter = async () => {
 .contact-icon {
   font-size: 1.2rem;
   flex-shrink: 0;
-  opacity: 0.8;
+  color: var(--accent-color);
 }
 
 .contact-item span:last-child {
@@ -336,13 +341,15 @@ const subscribeNewsletter = async () => {
   height: 45px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-decoration: none;
+  color: var(--white);
   transition: all 0.3s ease;
 }
 
 .social-link:hover {
   background: var(--accent-color);
+  color: var(--primary-color);
   transform: translateY(-2px);
 }
 
