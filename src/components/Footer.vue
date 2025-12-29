@@ -50,7 +50,7 @@
             </div>
             <div class="contact-item">
               <i class="bi bi-envelope-fill contact-icon"></i>
-              <span><a href="mailto:info@athayarayamadani.com">info@athayarayamadani.com</a></span>
+              <span><a href="mailto:arm.koperasi@athayarayamadani.co.id">arm.koperasi@athayarayamadani.co.id</a></span>
             </div>
             <div class="contact-item">
               <i class="bi bi-clock-fill contact-icon"></i>
