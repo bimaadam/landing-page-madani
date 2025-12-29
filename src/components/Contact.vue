@@ -29,17 +29,17 @@
               <i class="bi bi-geo-alt-fill info-icon"></i>
               <div class="info-content">
                 <h4>Alamat Kantor Pusat</h4>
-                <p>3M68+232, Jl. Venus Bar., Manjahlega, Kec. Rancasari, Kota Bandung<br> Jawa Barat 40286</p>
+                <p>JI. Cipamokolan No.8 RT.003 RW.001 Kel. Cipamokolan Kec. Rancasari<br>Kota Bandung 40292</p>
               </div>
             </div>
 
             <div class="info-item">
               <i class="bi bi-telephone-fill info-icon"></i>
               <div class="info-content">
-                <h4>Telepon & WhatsApp</h4>
+                <h4>Telepon</h4>
                 <p>
-                  <a href="tel:+622212345678">(022) 1234-5678</a><br>
-                  <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a>
+                  <a href="tel:+622287516947">022-87516947</a><br>
+                  <!-- <a href="https://wa.me/022-87516947" target="_blank">+62 812</a> -->
                 </p>
               </div>
             </div>
