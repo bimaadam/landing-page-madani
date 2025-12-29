@@ -49,8 +49,8 @@
               <div class="info-content">
                 <h4>Email</h4>
                 <p>
-                  <a href="mailto:info@athayarayamadani.com">info@athayarayamadani.com</a><br>
-                  <a href="mailto:cs@athayarayamadani.com">cs@athayarayamadani.com</a>
+                  <a href="https://www.athayarayamadani.co.id">https://www.athayarayamadani.co.id</a><br>
+                  <a href="mailto:arm.koperasi@athayarayamadani.co.id">arm.koperasi@athayarayamadani.co.id</a>
                 </p>
               </div>
             </div>
